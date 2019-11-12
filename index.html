@@ -6,17 +6,17 @@
 <body>
   <script>
     function computerPlay() {
-      let computerSelection = Math.floor(Math.random()) * 3;
-      if (computerSelection === 0) {
-        coputerSelection = "rock";
+      let computerSelection = Math.random();
+      if (computerSelection < 0.33) {
+        return "rock";
         }
-      else if (computerSelection === 1) {
-        computerSelection = "paper";
+      else if (computerSelection < 0.66) {
+        return "paper";
         }
       else {
-        coputerSelection = "scissors";
+        return "scissors";
         }
-      return computerSelection;
+      
     }
     
     function playRound(playerSelection, computerSelection) {
